@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\title{CS 3502: Multi-Threaded Programming and IPC Project}
+\author{Aly Traore \ CS 3502/W02 \ NETID: Atraor13@students.kennesaw.edu}
+\date{March 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This project demonstrates multi-threading and inter-process communication (IPC) in C#. The goals are to create a multi-threaded application using true parallel threads, apply synchronization mechanisms such as mutexes, and implement IPC using named pipes.
+
+\section{Implementation Details}
+
+\subsection{Multi-Threading Implementation}
+The project follows a four-phase threading approach:
+\begin{itemize}
+\item \textbf{Phase 1: Basic Multi-Threading} - Creates multiple threads to execute concurrent operations.
+\item \textbf{Phase 2: Synchronization with Mutex} - Implements mutexes to prevent race conditions.
+\item \textbf{Phase 3: Deadlock Demonstration} - Simulates a deadlock scenario using multiple mutexes.
+\item \textbf{Phase 4: Deadlock Resolution} - Implements a proper resource acquisition strategy to prevent deadlocks.
+\end{itemize}
+
+\subsection{IPC Implementation}
+IPC is implemented using Named Pipes to allow communication between separate processes:
+\begin{itemize}
+\item A \textbf{Pipe Server} listens for connections and sends messages.
+\item A \textbf{Pipe Client} connects to the server and receives messages.
+\item The server is extended to handle multiple clients concurrently.
+\end{itemize}
+
+\section{Challenges and Solutions}
+\begin{itemize}
+\item \textbf{Thread Synchronization} - Using mutexes prevented race conditions but required careful resource management.
+\item \textbf{Deadlocks} - Implementing proper locking sequences avoided circular wait conditions.
+\item \textbf{IPC Handling} - Named Pipes needed proper connection handling for multiple clients.
+\end{itemize}
+
+\section{Results and Testing}
+\subsection{Threading Testing}
+\begin{itemize}
+\item Verified thread execution using console logs.
+\item Tested mutex locks by running simultaneous operations on shared resources.
+\item Simulated deadlock and confirmed process freezing.
+\item Applied deadlock resolution and ensured smooth execution.
+\end{itemize}
+
+\subsection{IPC Testing}
+\begin{itemize}
+\item Verified client-server communication using Named Pipes.
+\item Ran multiple clients to test concurrent connections.
+\item Ensured proper data transmission and error handling.
+\end{itemize}
+
+\section{Conclusion}
+This project enhanced understanding of multi-threading and IPC in C#. Implementing synchronization mechanisms, handling deadlocks, and using Named Pipes for process communication provided valuable experience in concurrent programming.
+
+\end{document}
