@@ -26,4 +26,4 @@ This project demonstrates multi-threading and inter-process communication (IPC) 
 A video showcasing the execution is included: **CS3502_Demo.mp4**.
 
 ## 🔗 Repository Link
-[GitHub Repo Link Here]
+(https://github.com/Xyzrius1/CS3502_Project1)
